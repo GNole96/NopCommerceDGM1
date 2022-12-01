@@ -1,0 +1,16 @@
+package TestPackage3;
+
+public class P3gaurav {
+	
+	
+	public int a,b,c,d;
+	
+	public void Gn() {
+	for(a=5;a>=1;a--) 
+		for(b=5;b>=a;b--) {
+			System.out.println("+");
+	}
+	System.out.println();
+}
+	
+}

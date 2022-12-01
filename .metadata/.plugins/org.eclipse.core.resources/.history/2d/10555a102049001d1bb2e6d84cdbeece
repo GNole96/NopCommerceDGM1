@@ -1,0 +1,110 @@
+package Automation;
+
+import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
+
+public class PomFb {
+	
+	@FindBy (xpath = "//input[@class='inputtext _55r1 _6luy']")private WebElement InputId;
+	@FindBy (xpath = "//input[@name='pass']")private WebElement InputPass;
+	@FindBy (xpath = "//button[@value='1']")private WebElement ClickSubmit;
+	@FindBy (xpath = "//a[@rel='async']")private WebElement CreatAcc;
+	@FindBy (xpath = "//input[contains(@name,'firstname')]")private WebElement IpFirstname;
+	@FindBy (xpath = "//input[contains(@name,'lastname')]")private WebElement IpLastname;
+	@FindBy (xpath = "//input[contains(@name,'reg_email__')]")private WebElement IpEmail;
+	@FindBy (xpath = "//input[contains(@name,'reg_passwd__')]")private WebElement IpPass;
+	@FindBy (xpath = "//select[contains(@id,'day')]")private WebElement SelectDate;
+	@FindBy (xpath = "//select[contains(@id,'month')]")private WebElement SelectMonth;
+	@FindBy (xpath = "//select[contains(@id,'year')]")private WebElement SelectYear;
+	@FindBy (xpath = "//label[text()='Male']")private WebElement GenderMaleTick;
+	@FindBy (xpath = "//label[text()='Female']")private WebElement GenderFemaleTick;
+	@FindBy (xpath ="//button[contains(@name,'websubmit')]")private WebElement SignInButton;
+	@FindBy (xpath ="//select[@id='month']")private WebElement MonthSelect;
+	@FindBy (xpath ="//select[@name=\"birthday_year\"]")private WebElement YearSelect;
+	
+	public PomFb(WebDriver driver) {
+		PageFactory.initElements(driver,this);
+}	
+	
+	public void IpID(String A) {
+		InputId.sendKeys(A);
+	}
+	
+	public void IpPass(String B) {
+		InputPass.sendKeys(B);
+	}
+	
+	public void ClickOnLogin() {
+		ClickSubmit.click();
+	}
+	
+	public void CreatACC() {
+		CreatAcc.click();
+	}
+	
+	public void EnterFirstName(String FN) {
+		IpFirstname.sendKeys(FN);
+	}
+	public void EnterLastName(String LN) {
+		IpLastname.sendKeys(LN);
+	}
+	
+	public void EnterEmailForSingUp(WebDriver driver,String EMail) {
+		Actions A= new Actions(driver);
+		IpEmail.sendKeys(EMail);
+		A.sendKeys(Keys.TAB);
+		A.sendKeys(EMail);
+		A.build().perform();
+	}
+	
+	public void EnterPassForSingUp(String Pass) {
+		IpPass.sendKeys(Pass);
+	}
+	
+	public void DOB(WebDriver driver,int D,String M , String Y) throws InterruptedException {
+		Actions Dob=new Actions(driver);
+		Select A = new Select(SelectDate);
+		SelectDate.click();
+		A.selectByIndex(D-1);
+		Thread.sleep(2000);
+		Dob.click();
+		Thread.sleep(3000);
+		
+		MonthSelect.click();
+		A.deselectByValue(M);
+		Dob.click();
+		Thread.sleep(3000);
+		
+		YearSelect.click();
+		A.selectByValue(Y);;
+		Dob.click();
+		Dob.build().perform();
+		
+	}
+	
+	public void selectGender(String G) {
+		if(G=="Male") {
+			GenderMaleTick.click();
+		}else {
+			GenderFemaleTick.click();
+		}
+	}
+	
+	public void SignUpclick() {
+		SignInButton.click();
+	}
+	
+}
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+package inheritance;
+
+public interface Gaurav extends Madhu,GM {
+	
+	 static void gn(int a) {System.out.println(a);}
+	
+	
+	 void gn ();
+
+	 // a = 30;
+}

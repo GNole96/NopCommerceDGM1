@@ -1,0 +1,25 @@
+package Automation;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class Iframe {
+	public static void main(String[] args) {
+		
+		WebDriver driver = GnEmpliment.openbrowser("https://vctcpune.com/");
+		
+		WebElement pracpage = driver.findElement(By.xpath("//a[text()='Start Selenium Practice']"));
+		pracpage.click();
+		
+		GnEmpliment.switchFocuse(driver, "Practice Page");
+		
+		WebElement ifram = driver.findElement(By.xpath("//iframe[@style=' width: 100%; height: 600px']"));
+	
+		driver.switchTo().frame(ifram);
+		
+		WebElement ddd = driver.findElement(By.xpath("//li[@class='menu-item menu-item-type-post_type menu-item-object-page menu-item-1163']"));
+		ddd.click();
+	}
+
+}

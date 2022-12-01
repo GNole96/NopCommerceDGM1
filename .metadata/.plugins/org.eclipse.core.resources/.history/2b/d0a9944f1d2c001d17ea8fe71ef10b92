@@ -1,0 +1,26 @@
+package inheritance;
+
+public class Implements implements Gaurav,Madhu {
+	
+	
+	public void gn() {
+		
+		System.out.println("Hii");
+		
+	}
+	
+	public void MB() {
+		
+		System.out.println("Bye");
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Implements obj = new Implements();
+		
+		obj.gn();
+		obj.MB();
+		
+	}
+}

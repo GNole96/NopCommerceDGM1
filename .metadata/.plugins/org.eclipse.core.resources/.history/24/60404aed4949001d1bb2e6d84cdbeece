@@ -1,0 +1,59 @@
+package Automation;
+
+import org.openqa.selenium.WebDriver;
+
+public class PomFbExecution {
+	
+	public void VerifyEmail() throws InterruptedException {
+		WebDriver driver = GnEmpliment.openbrowser("https://www.facebook.com/");
+		Thread.sleep(2000);
+		PomFb obj1=new PomFb(driver);
+		obj1.IpID("abcd@gmail.com");
+		obj1.ClickOnLogin();
+	}
+	
+	public void VerifyPass() {
+		WebDriver driver = GnEmpliment.openbrowser("https://www.facebook.com/");
+		PomFb obj1=new PomFb(driver);
+		obj1.IpPass("1234567");
+		obj1.ClickOnLogin();
+	}
+	
+	public void VerifyLogInIdPass() {
+		WebDriver driver = GnEmpliment.openbrowser("https://www.facebook.com/");
+		PomFb obj1=new PomFb(driver);
+		obj1.IpID("abcd@gmail.com");
+		obj1.IpPass("1234567");
+		obj1.ClickOnLogin();
+	}
+	
+	public void CreatNewAcc() throws InterruptedException {
+		WebDriver driver = GnEmpliment.openbrowser("https://www.facebook.com/");
+		PomFb obj1=new PomFb(driver);
+		obj1.CreatACC();
+		Thread.sleep(3000);
+		obj1.EnterFirstName("Gaurav");
+		obj1.EnterLastName("Nole");
+		obj1.EnterEmailForSingUp(driver,"abcd001@gmail.com");
+		obj1.EnterPassForSingUp("1234567");
+		
+		Thread.sleep(2000);
+		obj1.DOB(driver, 19, 9 , "1996");
+		obj1.selectGender("Male");
+		obj1.SignUpclick();
+	}
+	
+	public static void main(String[] args) throws InterruptedException {
+		
+		PomFbExecution obj =new PomFbExecution();
+	/*	obj.VerifyEmail();
+		Thread.sleep(3000);
+		obj.VerifyPass();
+		Thread.sleep(3000);
+		obj.VerifyLogInIdPass();
+		Thread.sleep(3000);
+	*/	obj.CreatNewAcc();
+		
+	}
+	
+}

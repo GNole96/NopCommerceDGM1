@@ -1,0 +1,33 @@
+package Automation;
+
+public class GnEmpliment {
+	
+	
+	private char[] a;
+
+	void MB() {
+		//implicite castig
+		
+//	 byte a = 20;
+//	 int z = a;   // data Widding 
+//	 
+//	 //explicite Casting 
+//	 
+		//int a;
+		short g = 9999;        
+	 int x = 999999999;
+	 
+	  System.out.println(x);
+	  
+	  int i ;
+	  double d = 55555.5555;
+	  i = (int) d ;
+	  System.out.println(i);
+	}
+
+	public static void main(String[] args) {
+		GnEmpliment g = new GnEmpliment();
+		
+		g.MB();
+	}
+}

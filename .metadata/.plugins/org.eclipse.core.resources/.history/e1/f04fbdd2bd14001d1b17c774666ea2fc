@@ -1,0 +1,26 @@
+package TestPackage1;
+
+import java.util.Scanner;
+public class TestClass1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	System.out.println("Hello World");
+	
+	System.out.println("Hii, Good Morning Guys");
+	int a = 22;
+	System.out.println(a);
+	
+	float b = 12.5f;
+	double c = 22.5;
+ System.out.println(a>c);
+Scanner sc = new Scanner(System.in);
+
+	System.out.println("Enter s value");
+	int s = sc.nextInt();
+	System.out.println("Enter t value ");
+	int t = sc.nextInt();
+	System.out.println(s>t);
+}
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FbSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="TestFbFun(failed)">
+    <classes>
+      <class name="Automation.TestNgFB">
+        <methods>
+          <include name="AlertsHandle"/>
+          <include name="Close"/>
+        </methods>
+      </class> <!-- Automation.TestNgFB -->
+    </classes>
+  </test> <!-- TestFbFun(failed) -->
+</suite> <!-- Failed suite [FbSuite] -->

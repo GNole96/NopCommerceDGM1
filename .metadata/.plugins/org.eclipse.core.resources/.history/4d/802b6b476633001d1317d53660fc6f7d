@@ -1,0 +1,65 @@
+package TestPackage3;
+
+public class Arrays {
+	
+		
+	/*	int [] a = {10,20,30,40,50,60};
+		
+		System.out.println(a[1]);  // for calling single element. 
+		System.out.println(a[2]);
+		System.out.println(a.length);
+		System.out.println(a[0]+a[1]+a[2]+a[3]+a[4]); // sum of array.
+		
+		
+		char [] w =new char[] {'a','b','c','d','e'} ;
+		System.out.println(w[4]);
+		
+		char [] e = new char[10];
+		e[0]=10;
+		e[1]=20;
+		e[2]=30;
+		
+		//System.out.println(s[3]);
+		//stem.out.println(s[4]);
+		
+		//for finding the length of array;
+	     	int rev=0;
+			for(int value:a) 
+			{
+			 rev=rev+value;
+			}
+			System.out.println(rev);
+			*/
+		
+		public void A()
+		{		String [] s = {"Shubham","Gaurav","Mukesh","Nitin","Balram"};
+	    int A = s.length ;
+	    
+	   	String z = "";
+	   	
+	   	for(String a:s) {
+	   		
+	   	//	System.out.println(a);
+	   		for(int i=A-1;i>=0;i--) {
+	   			
+	   			System.out.print(a.charAt(i));
+	   		}
+	   		
+	   		
+	   	}
+		}
+	
+	   	public static void main(String[] args) {
+	   		Arrays g = new Arrays();
+	   		
+	   		g.A();
+	   		
+		}
+		}
+		
+		
+		
+		
+		
+	
+

@@ -1,0 +1,59 @@
+package TestPackage1;
+	import java.util.Scanner;
+
+	public class Myoldpractice {
+	    public static void main(String[] args) {{
+		// write your code here
+	            // write a code for calculating percentages.
+	            Scanner sc = new Scanner(System.in);
+	            System.out.println("Please enter your full name.");
+	            String name = sc.nextLine();
+	            System.out.println("Hello "+ name +" please enter your marks.");
+	            System.out.println("enter the marks obtain in biolgy.");
+	            float bio = sc.nextInt();
+	            System.out.println("enter the marks obtain in math.");
+	            float math = sc.nextInt();
+	            System.out.println("enter the marks obtain in phy.");
+	            float phy = sc.nextInt();
+	            System.out.println("enter the marks obtain in che.");
+	            float che = sc.nextInt();
+
+	            System.out.println("Enter out off marks that is out of 80 or 100.");
+	            int y = sc.nextInt();
+	            if (y==100){
+	                float sum = ((bio+math+phy+che)/400)*100;
+	                System.out.println("your percentages is :- "+sum);
+	                if ((bio>40) && (sum>40)) {
+	                    System.out.println("you are pass");}
+	                    else if ((phy>40) && (sum>40)){
+	                        System.out.println("you are pass");}
+	                        else if ((che>40) && (sum>40)) {
+	                            System.out.println("you are pass");}
+	                        else if ((math>40) && (sum>40)) {
+	                            System.out.println("you are pass");
+	                        }
+	                else{
+	                    System.out.println("you are Fail");}
+	            }
+	            else {
+	                float sum = ((bio + math + phy + che) / 320) * 100;
+	                System.out.println("your percentages is :- " + sum);
+	                if ((bio>30) && (sum>30)){
+	                    System.out.println("you are pass");}
+	                else if ((phy>30) && (sum>30)){
+	                    System.out.println("you are pass");}
+	                else if ((che>30) && (sum>30)) {
+	                    System.out.println("you are pass");}
+	                else if ((math>30) && (sum>30)) {
+	                    System.out.println("you are pass");}
+	                else {
+	                    System.out.println("you are Fail");
+	                }
+	            }
+
+	            System.out.println("Thank you");
+	        }
+	    }
+	}
+
+	

@@ -1,0 +1,19 @@
+package TestPackage1;
+import java.util.Scanner;
+
+public class IFandIfElse {
+	public static void main(String []args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		
+		int Number = sc.nextInt();
+		int k;
+		
+		if(Number>=100){System.out.println("Number is greater than 100");
+		}
+		else {System.out.println("It is less than 100");
+		
+		}
+}
+	}

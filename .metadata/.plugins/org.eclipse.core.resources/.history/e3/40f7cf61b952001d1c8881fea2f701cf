@@ -1,0 +1,108 @@
+package Automation;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class KeybordActions {private static final String ExpectionConditions = null;
+
+//Test Case = verify the create page module functionality of FB.
+	public static void main(String[] args) throws InterruptedException {
+	
+	WebDriver driver = GnEmpliment.openbrowser("https://www.facebook.com/");
+	String Pagetitle = driver.getTitle();
+	String needtitle="Facebook-log in and sign up"; // from srs doc 
+	if(Pagetitle.equals(needtitle)) {   // validation point 
+		System.out.println("Your Current page title is Correct that is :- "+Pagetitle);
+	}else {System.out.println("Your Current page title should be :- "+Pagetitle);}
+	
+	String CurrentpageUrl=driver.getCurrentUrl();
+	String GivenUrl="https://www.facebook.com/";
+	if(CurrentpageUrl.equals(GivenUrl)) {
+		System.out.println("Your Current page Url is Correct that is :- "+CurrentpageUrl);
+	}else {System.out.println("Your Current page Url should be :-"+GivenUrl); }
+	
+
+	
+	WebElement creatAcc =driver.findElement(By.xpath("(//a[@role=\"button\"])[2]"));
+		creatAcc.click();
+		
+		System.out.println("Here create page button is clickable so button functionality is verified");
+		
+		Actions act = new Actions(driver);
+		   WebElement  inputName =driver.findElement(By.xpath("//input[@class='inputtext _58mg _5dba _2ph-']"));
+			
+//		driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));//implicite wait
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofMillis(6000));
+//      wait.until(ExpectedConditions.visibilityOf(inputName));
+        
+        boolean inputfieldEnable = inputName.isEnabled();
+		if(inputfieldEnable==true) {
+			System.out.println("After click on create page button it open correct popup that is creat Page popup");
+		}
+		
+		act.sendKeys("Ramkrushnappa");
+		act.perform();
+		
+		act.sendKeys(Keys.TAB);
+		act.perform();
+		
+		act.sendKeys("Bairiyya");
+		act.perform();
+		
+		act.sendKeys(Keys.TAB);
+		act.perform();
+		
+		act.sendKeys("rkb@gmail.com");
+		act.perform();
+		
+		act.sendKeys(Keys.TAB);
+		act.perform();
+		
+		act.sendKeys("K@r*1965");
+		act.perform();
+		act.keyDown(Keys.CONTROL);
+		act.perform();
+		act.sendKeys("a");
+		act.perform();
+		act.sendKeys("c");
+		act.perform();
+		act.keyUp(Keys.CONTROL);
+		act.perform();
+		
+		act.sendKeys(Keys.TAB);
+		act.perform();
+		
+		act.keyDown(Keys.CONTROL);
+		act.perform();
+		
+		act.sendKeys("v");
+	
+		act.perform();
+
+		act.sendKeys(Keys.TAB);
+		act.perform();
+		
+		WebElement dropDate = driver.findElement(By.xpath("//select[@name=\"birthday_day\"]"));
+		Select a=new Select(dropDate);
+		a.selectByIndex(20);
+		
+		act.sendKeys(Keys.TAB);
+		act.perform();
+		
+	    WebElement Drpmonth = driver.findElement(By.xpath("//select[@name=\"birthday_month\"]"));
+	    Select b = new Select(Drpmonth);
+	    b.selectByVisibleText("Sep");
+	   
+		act.sendKeys(Keys.TAB);
+		act.perform();
+			
+	}
+}

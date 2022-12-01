@@ -1,0 +1,20 @@
+package Automation;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class NewPractice {
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.edgrdriver.driver", "D:\\apps\\Selenium\\msedgedriver.exe");
+		
+		WebDriver driver = new EdgeDriver();
+		
+		driver.get("https://vctcpune.com/selenium/practice.html");
+		
+		
+		
+	}
+	
+
+}

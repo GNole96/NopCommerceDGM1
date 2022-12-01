@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-11-13T19:11:56 IST" name="Default suite" finished-at="2022-11-13T19:12:44 IST" duration-ms="47641">
+    <groups>
+    </groups>
+    <test started-at="2022-11-13T19:11:56 IST" name="Default test" finished-at="2022-11-13T19:12:44 IST" duration-ms="47641">
+      <class name="SwagLabTest.Practice">
+        <test-method signature="SelectClass()[pri:0, instance:SwagLabTest.Practice@6973b51b]" started-at="2022-11-13T19:11:56 IST" name="SelectClass" finished-at="2022-11-13T19:12:44 IST" duration-ms="47481" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectClass -->
+      </class> <!-- SwagLabTest.Practice -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

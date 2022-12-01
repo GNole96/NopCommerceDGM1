@@ -1,0 +1,13 @@
+package TestPackage3;
+
+public class nonPrimetiveDT {
+	public static void main(String[] args) {
+		
+		
+	String G = "Gaurav"; // this is literal way of string writing.
+		
+	System.out.println(G.charAt(0)); 
+		
+		
+	}
+}

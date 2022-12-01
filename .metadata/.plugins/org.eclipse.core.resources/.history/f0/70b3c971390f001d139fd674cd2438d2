@@ -1,0 +1,66 @@
+package TestPackage1;
+import java.util.Scanner;
+
+public class IFandIfElse {
+	public static void main(String []args) {
+		
+		/*Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number");
+		
+		int Number = sc.nextInt();
+		int k;
+		
+		if(Number>=100){System.out.println("Number is greater than 100");
+		}
+		else {System.out.println("It is less than 100");*/
+		///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+		
+		/*CONDITION :- if i have 3 hr of class from  2pm to 4pm, then in which  i can  play,learn and swim.so
+		check conditions if i reach in 1st hr, 2nd hr or 3rd hr of class .          */
+		
+		//String A = "play";
+		//String B = "learn";
+		//String C = "swim";
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("i have 3 hr of class from  2pm to 4pm, In which  i can  play,learn and swim other wise i can miss classes as per time .So enter the time when i reach in my class(Enter only number)");
+		int A = sc.nextInt();
+		
+		//System.out.println("I Reached in time at 2pm Thank god");
+		
+		if(A==2){System.out.println("Yehh!,I Reached in time at 2pm Thank god");
+			System.out.println("Now I can Learn and Play and Swim also");
+			}
+		else if(A==3){
+			System.out.println("oops!,Now i can do only Swim And Play ");
+			}
+			else if(A==4){System.out.println("Ohh No!,Now I can do only one thing only Swimming");
+			}
+			else {System.out.println("Ohh No!,I am already out of time Cant attend any class ");
+			}
+		
+		 
+		 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		}
+}
+	
